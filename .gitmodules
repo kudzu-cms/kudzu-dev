@@ -1,0 +1,6 @@
+[submodule "kudzu"]
+	path = kudzu
+	url = git@github.com:kudzu-cms/kudzu.git
+[submodule "kudzu-cli"]
+	path = kudzu-cli
+	url = git@github.com:kudzu-cms/kudzu-cli.git
