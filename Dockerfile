@@ -16,4 +16,5 @@ WORKDIR /kudzu
 RUN go mod download
 
 # ENTRYPOINT CompileDaemon --build="dlv debug --headless --listen=:2345 --log --continue --accept-multiclient" --command=./__debug_bin
+COPY ./scripts/kudzu-wrapper /usr/local/bin
 ENTRYPOINT [ "kudzu-wrapper" ]
