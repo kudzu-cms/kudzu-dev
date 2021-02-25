@@ -1,0 +1,12 @@
+#!/bin/bash
+# Entrypoint wrapper.
+# set -x
+
+if [[ $KUDZU_DEBUG == "true" ]]
+then
+  echo "Running in debug mode..."
+  kudzu-cli build plugins --debug &&
+  dlv debug --headless --listen=:2345 --log --continue --accept-multiclient
+else
+  kudzu-cli build plugins && go build && ./kudzu
+fi

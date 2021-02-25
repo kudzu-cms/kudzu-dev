@@ -1,4 +1,5 @@
 FROM golang:1.16.0
+ARG KUDZU_DEBUG
 
 RUN go get github.com/githubnemo/CompileDaemon
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
@@ -15,10 +16,4 @@ WORKDIR /kudzu
 RUN go mod download
 
 # ENTRYPOINT CompileDaemon --build="dlv debug --headless --listen=:2345 --log --continue --accept-multiclient" --command=./__debug_bin
-
-# Debug.
-ENTRYPOINT kudzu-cli build plugins --debug && \
-dlv debug --headless --listen=:2345 --log --continue --accept-multiclient
-
-# Normal.
-# ENTRYPOINT kudzu-cli build plugins && go build && ./kudzu
+ENTRYPOINT [ "kudzu-wrapper" ]
