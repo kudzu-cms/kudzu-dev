@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "kudzu-cli"
+		},
+		{
+			"path": "kudzu"
+		}
+	],
+	"settings": {}
+}
