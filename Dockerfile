@@ -1,5 +1,7 @@
 FROM golang:1.16.0
+
 ARG KUDZU_DEBUG
+ARG KUDZU_CORS_ORIGIN
 
 RUN go get github.com/githubnemo/CompileDaemon
 RUN go install github.com/go-delve/delve/cmd/dlv@latest

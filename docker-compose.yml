@@ -5,6 +5,7 @@ services:
       context: .
       args:
         KUDZU_DEBUG: "${KUDZU_DEBUG}"
+        KUDZU_CORS_ORIGIN: "${KUDZU_CORS_ORIGIN}"
     ports:
       - '8080:8080'
       - '2345:2345'
