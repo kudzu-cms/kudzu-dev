@@ -4,3 +4,6 @@
 [submodule "kudzu-cli"]
 	path = kudzu-cli
 	url = git@github.com:kudzu-cms/kudzu-cli.git
+[submodule "kudzu-admin-react"]
+	path = kudzu-admin-react
+	url = git@github.com:kudzu-cms/kudzu-admin-react.git

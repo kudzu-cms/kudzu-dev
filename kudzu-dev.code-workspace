@@ -24,6 +24,9 @@
 		},
 		{
 			"path": "kudzu"
+		},
+		{
+			"path": "kudzu-admin-react"
 		}
 	],
 	"settings": {}
